@@ -5,6 +5,7 @@ BOT_NAME = "PaywallHelperBotv2"
 SUBREDDITS = ["Maine", "portlandme"]
 QUESTIONS = ["what is", "who is", "what are"]
 REPLY_TEMPLATE = "[Link](https://12ft.io/proxy?q={}) for those who need help getting over a paywall"
+DOMAIN_LISTINGS = ["pressherald.com", "bangordailynews.com", "spectrumlocalnews.com", "centralmaine.com"]
 HOURS_OFFSET = 48
 OFFSET_TIME_FOR_SEARCHING = (datetime.now(timezone.utc) - timedelta(hours=HOURS_OFFSET)).timestamp()
 OFFSET_TIME_FOR_RESPONDING = (datetime.now(timezone.utc) - timedelta(hours=6)).timestamp()
