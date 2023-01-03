@@ -3,7 +3,6 @@ from datetime import datetime, timedelta, timezone
 
 BOT_NAME = "PaywallHelperBotv2"
 SUBREDDITS = ["Maine", "portlandme"]
-QUESTIONS = ["what is", "who is", "what are"]
 REPLY_TEMPLATE = "[Link](https://12ft.io/proxy?q={}) for those who need help getting over a paywall"
 DOMAIN_LISTINGS = ["pressherald.com", "bangordailynews.com", "spectrumlocalnews.com", "centralmaine.com"]
 HOURS_OFFSET = 48
@@ -22,8 +21,6 @@ def main():
 
     logToFile('Start', 'Starting the bot')
 
-    #print(reddit.user.me())
-
     for subredditName in SUBREDDITS:
         subreddit = reddit.subreddit(subredditName)
         for submission in subreddit.new():
@@ -32,13 +29,6 @@ def main():
                 process_submission(submission)
 
     logToFile('End', 'Done processing!')
-
-
-
-def delete_comment(comment):
-    print(f"Deleting a comment: {comment.body}")
-    comment.delete()
-    
 
 def process_submission(submission):
     if submission.created_utc > OFFSET_TIME_FOR_SEARCHING:
