@@ -14,3 +14,9 @@ First Name suggestion: Paywall Helper Bot
 
 [PRAW](https://praw.readthedocs.io/en/stable/getting_started/quick_start.html)
 
+
+
+## Archive.is/Archive.ph
+
+Updated Archive implementation handles snapshotting of the file using archive.is/ph services. 
+
