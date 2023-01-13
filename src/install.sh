@@ -11,3 +11,6 @@ python3 -m pip install selenium pyvirtualdisplay pillow EasyProcess
 # Add execute permissions for run file. This is needed for scheduling.
 chmod +x src/runbot.sh
 chmod +x src/main.py
+
+# Secrets Handling
+pip install python-dotenv  
